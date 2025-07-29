@@ -1,4 +1,4 @@
-class JSONViewer {
+class JsonViewer {
   constructor(options = {}) {
     this.options = Object.assign({rootCollapsable: true, clickableUrls: true, bigNumbers: false}, options);
   }
