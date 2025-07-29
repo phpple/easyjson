@@ -1,7 +1,7 @@
 {
   "name": "Easy Json",
   "description": "A Json Chrome Extension,display json well,support BigInt,JsonPath.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 3,
   "action": {
     "default_popup": "pages/setting.html",
@@ -14,10 +14,8 @@
         "scripts/json-path/jsonpath.js",
         "scripts/json-bigint/bignumber.js",
         "scripts/json-bigint/parse.js",
+        "scripts/easyjson.js",
         "scripts/content.js"
-      ],
-      "css": [
-        "styles/jsonviewer.css"
       ],
       "matches": [
         "<all_urls>"
