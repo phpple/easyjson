@@ -21,7 +21,7 @@ chrome.webNavigation.onDOMContentLoaded.addListener(async ({tabId, url}) => {
     chrome.scripting.executeScript({
       target: {tabId},
       files: [
-        'scripts/third-part/big-number.js',
+        'scripts/third-part/bignumber.js',
         'scripts/third-part/json-bigint.js',
         'scripts/third-part/json-path.js',
         'scripts/third-part/json-viewer.js',
