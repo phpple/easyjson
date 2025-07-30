@@ -1,4 +1,7 @@
 chrome.webNavigation.onDOMContentLoaded.addListener(async ({tabId, url}) => {
+  if (!url.startsWith('http://') && !url.startsWith('https://')) {
+    return;
+  }
   chrome.scripting.executeScript({
     target: {tabId},
     files: [

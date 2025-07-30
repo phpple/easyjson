@@ -7,6 +7,13 @@
   const viewer = new JsonViewer({clickableUrls: false, bigNumbers: true});
 
   function showJson(content) {
+    let newContent = null;
+    try {
+      newContent = json_parse()(content)
+    } catch (e) {
+      throw e;
+    }
+
     // remove all children
     for (let i = document.body.children.length - 1; i >= 0; i--) {
       document.body.removeChild(document.body.children[i])
@@ -29,7 +36,6 @@
     pre.id = 'json-renderer'
     document.body.appendChild(pre)
 
-    const newContent = json_parse()(content)
     context.globalData = newContent;
     viewer.render(newContent)
 

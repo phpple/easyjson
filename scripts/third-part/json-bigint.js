@@ -203,7 +203,7 @@ var json_parse = function (options) {
       if (!isFinite(number)) {
         error('Bad number');
       } else {
-        if (BigNumber == null) BigNumber = require('scripts/third-part/big-number.js');
+        if (BigNumber == null) BigNumber = require('scripts/third-part/bignumber.js');
         if (Number.isSafeInteger(number))
           return !_options.alwaysParseAsBig
             ? number
