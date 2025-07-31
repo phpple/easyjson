@@ -56,6 +56,7 @@
       path: path,
       json: context.globalData,
       callback: (result) => {
+        console.log(path, result)
         context.currentData = result
         context.path = path
         viewer.render(result)
